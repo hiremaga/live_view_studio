@@ -7,15 +7,15 @@
 # General application configuration
 use Mix.Config
 
-config :my_app,
-  ecto_repos: [MyApp.Repo]
+config :live_view_studio,
+  ecto_repos: [LiveViewStudio.Repo]
 
 # Configures the endpoint
-config :my_app, MyAppWeb.Endpoint,
+config :live_view_studio, LiveViewStudioWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "pBerj52axbgEoVIomyvS+vKD3wniBTnrfp917mCrMCD9DMpec4owyDLvFAFQ3ZTs",
-  render_errors: [view: MyAppWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: MyApp.PubSub,
+  render_errors: [view: LiveViewStudioWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: LiveViewStudio.PubSub,
   live_view: [signing_salt: "xKcCZD0e"]
 
 # Configures Elixir's Logger

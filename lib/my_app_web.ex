@@ -1,12 +1,12 @@
-defmodule MyAppWeb do
+defmodule LiveViewStudioWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use MyAppWeb, :controller
-      use MyAppWeb, :view
+      use LiveViewStudioWeb, :controller
+      use LiveViewStudioWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,19 +19,19 @@ defmodule MyAppWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: MyAppWeb
+      use Phoenix.Controller, namespace: LiveViewStudioWeb
 
       import Plug.Conn
-      import MyAppWeb.Gettext
-      alias MyAppWeb.Router.Helpers, as: Routes
+      import LiveViewStudioWeb.Gettext
+      alias LiveViewStudioWeb.Router.Helpers, as: Routes
     end
   end
 
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/my_app_web/templates",
-        namespace: MyAppWeb
+        root: "lib/live_view_studio_web/templates",
+        namespace: LiveViewStudioWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
@@ -45,7 +45,7 @@ defmodule MyAppWeb do
   def live_view do
     quote do
       use Phoenix.LiveView,
-        layout: {MyAppWeb.LayoutView, "live.html"}
+        layout: {LiveViewStudioWeb.LayoutView, "live.html"}
 
       unquote(view_helpers())
     end
@@ -72,7 +72,7 @@ defmodule MyAppWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import MyAppWeb.Gettext
+      import LiveViewStudioWeb.Gettext
     end
   end
 
@@ -87,9 +87,9 @@ defmodule MyAppWeb do
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
 
-      import MyAppWeb.ErrorHelpers
-      import MyAppWeb.Gettext
-      alias MyAppWeb.Router.Helpers, as: Routes
+      import LiveViewStudioWeb.ErrorHelpers
+      import LiveViewStudioWeb.Gettext
+      alias LiveViewStudioWeb.Router.Helpers, as: Routes
     end
   end
 

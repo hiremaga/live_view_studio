@@ -1,4 +1,4 @@
-# MyApp
+# LiveViewStudio
 
 To start your Phoenix server:
 
