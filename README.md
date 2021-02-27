@@ -1,20 +1,25 @@
-# LiveViewStudio
+# LiveView Studio
 
-To start your Phoenix server:
+## Installation
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Install Node.js dependencies with `npm install` inside the `assets` directory
-  * Start Phoenix endpoint with `mix phx.server`
+1. Set up the project:
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+    ```sh
+    mix setup
+    ```
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+2. Fire up the Phoenix endpoint:
 
-## Learn more
+    ```sh
+    mix phx.server
+    ```
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+3. Visit [`localhost:4000`](http://localhost:4000) from your browser.
+
+## App Generation
+
+This app was generated using:
+
+```sh
+mix phx.new live_view_studio --live
+```

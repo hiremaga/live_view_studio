@@ -7,7 +7,7 @@ defmodule LiveViewStudioWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_live_view_studio_key",
-    signing_salt: "A0huR8qu"
+    signing_salt: "82iEUuqd"
   ]
 
   socket "/socket", LiveViewStudioWeb.UserSocket,

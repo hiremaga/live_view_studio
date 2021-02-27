@@ -7,9 +7,10 @@ defmodule LiveViewStudioWeb.SearchLive do
     socket =
       assign(socket,
         zip: "",
-        stores: Stores.list_stores,
+        stores: [],
         loading: false
       )
+
     {:ok, socket}
   end
 
@@ -20,18 +21,19 @@ defmodule LiveViewStudioWeb.SearchLive do
 
       <form phx-submit="zip-search">
         <input type="text" name="zip" value="<%= @zip %>"
-        placeholder="Zip Code"
-        autofocus autocomplete="off"
-        <%= if @loading, do: "readonly" %> />
+               placeholder="Zip Code"
+               autofocus autocomplete="off"
+               <%= if @loading, do: "readonly" %> />
+
         <button type="submit">
-          <img src="images/search.svg"/>
+          <img src="images/search.svg">
         </button>
       </form>
 
       <%= if @loading do %>
-      <div class="loader">
-        Loading...
-      </div>
+        <div class="loader">
+          Loading...
+        </div>
       <% end %>
 
       <div class="stores">
@@ -93,10 +95,7 @@ defmodule LiveViewStudioWeb.SearchLive do
 
       stores ->
         socket = assign(socket, stores: stores, loading: false)
-
         {:noreply, socket}
     end
-
-
   end
 end

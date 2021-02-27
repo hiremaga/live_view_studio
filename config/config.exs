@@ -13,10 +13,10 @@ config :live_view_studio,
 # Configures the endpoint
 config :live_view_studio, LiveViewStudioWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "pBerj52axbgEoVIomyvS+vKD3wniBTnrfp917mCrMCD9DMpec4owyDLvFAFQ3ZTs",
+  secret_key_base: "GphPsKMAdYRKJMlOBg6pyff5gV0HuorxEbckV74fiae/QRGYO8vSjRApXlA2vY3k",
   render_errors: [view: LiveViewStudioWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: LiveViewStudio.PubSub,
-  live_view: [signing_salt: "xKcCZD0e"]
+  live_view: [signing_salt: "R/RRcygN"]
 
 # Configures Elixir's Logger
 config :logger, :console,
