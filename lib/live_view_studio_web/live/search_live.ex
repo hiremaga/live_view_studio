@@ -8,7 +8,7 @@ defmodule LiveViewStudioWeb.SearchLive do
       assign(socket,
         zip: "",
         stores: [],
-        loading: false
+        loading: false,
       )
 
     {:ok, socket}
