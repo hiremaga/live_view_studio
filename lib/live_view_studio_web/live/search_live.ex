@@ -7,7 +7,7 @@ defmodule LiveViewStudioWeb.SearchLive do
     socket =
       assign(socket,
         zip: "",
-        stores: [],
+        stores: Stores.list_stores,
         loading: false
       )
     {:ok, socket}
