@@ -16,7 +16,7 @@ defmodule LiveViewStudioWeb.LightLive do
     <div id="light">
       <div class="meter">
         <span style="background-color: <%= temp_color(@temp) %>;
-                     width: <%= @brightness %>">
+                     width: <%= @brightness %>%">
           <%= @brightness %>%
         </span>
       </div>
